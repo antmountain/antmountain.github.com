@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+<body>
+  <div id="container">
+    <header>
+
+    </header>
+    <div id="main" role="main">
+    <h1>Metastream event management API</h1>
+    <h2>Server Applications</h2>
+    <h3>POST /listen/[filter]</h3>
+    <pre class="request">
+{
+  "app" : "[name]",
+  "endpoint" : "[uri]"
+}</pre>
+    <pre class="response">
+{
+  "result" : "OK"
+}</pre>
+    <h3>POST /say/[filter]</h3>
+    <pre class="request">
+{
+  "app" : "[name]",
+  "payload" : {[event data]}
+}</pre>
+    <pre class="response">
+{
+  "result" : "OK"
+}</pre>
+    <h3>POST /filters</h3>
+    <pre class="request">
+{
+  "channels" : ["channel1","channel2",...]
+}</pre>
+    <pre class="response">
+{
+  "result" : "OK",
+  "filter" : "%5E(channel(1%7C2))%24"
+}</pre>
+    <h2>Data Applications</h2>
+    <h3>GET /channels/[channel]/</h3>
+    <pre class="response">
+[
+  {
+    "start" : 0,
+    ...
+  },
+  {
+    "start" : 100,
+    "duration" : "5000",
+    ...
+  },
+  ...
+]</pre>
+    <h3>GET /channels/[channel]/[timecode]/</h3>
+    <pre class="response">
+[
+  {
+    "start" : [timecode],
+    ...
+  },
+  {
+    "start" : [timecode],
+    "duration" : "5000",
+    ...
+  },
+  ...
+]</pre>
+    <h3>GET /channels/[channel]/[timecode]/[id]</h3>
+    <pre class="response">
+[
+  {
+    "id" : [id]
+    "start" : [timecode],
+    ...
+  },
+  ...
+]</pre>
+    <h3>PUT /channels/[channel]/[timecode]/[id]</h3>
+    <pre class="request">
+{
+  ...
+}</pre>
+    <pre class="response">
+{
+  "result" : "OK"
+}</pre>
+    <h3>DELETE /channels/[channel]</h3>
+    <pre class="response">
+{
+  "result" : "OK"
+}</pre>
+    <h3>DELETE /channels/[channel]/[timecode]</h3>
+    <pre class="response">
+{
+  "result" : "OK"
+}</pre class="response">
+    <h3>DELETE /channels/[channel]/[timecode]/[id]</h3>
+    <pre>
+{
+  "result" : "OK"
+}</pre>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+</body>
+</html>

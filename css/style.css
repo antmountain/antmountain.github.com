@@ -1,0 +1,48 @@
+html, body {
+	font-family:helvetica, arial, freesans, clean, sans-serif;
+	font-size: 1em;
+	background-color: #F8F8F8;
+}
+
+html,body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#container {
+	background-color: #FFF;
+	margin: 1em;
+}
+
+h1 {
+	font-weight:normal;
+	font-size:1.4em;
+	padding: 1em .5em .5em .5em;
+}
+
+h2 {
+	font-weight:normal;
+	font-size:1.2em;
+	padding: 1em .5em .5em .5em;
+}
+
+h3 {
+	font-weight:normal;
+	font-size:1.1em;
+	padding: 1em .5em .5em .5em;
+}
+
+pre {
+	font-family: Monaco, sans-serif;
+	padding: 1em;
+	margin: .5em;
+	border: 1px dotted #000;
+}
+
+pre.request {
+	background-color: #F8FFF8;
+}
+
+pre.response {
+	background-color: #F8F8FF;
+}
